@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+      <div class="col-md-8 ftco-animate text-center">
+        <h3 class="mb-3 bread">Liste des inscrits</h3>
+
+    </div>
+  </div>
+  </div>
+<form [formGroup]="etudiantForm" class="form-Align" >
+    Id: <input type="number" name="" id="" formControlName="id" class="form-control m-lg-3">
+    Matricule: <input type="text" name="" id="" formControlName="matricule" class="form-control m-lg-3">
+    Nom: <input type="text" name="" id="" formControlName="nom" class="form-control m-lg-3">
+    Prenom: <input type="text" name="" id="" formControlName="prenom" class="form-control m-lg-3">
+    Classe: <input type="text" name="" id="" formControlName="classe" class="form-control m-lg-3">
+</form>
+<br>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Id</th> 
+            <th>Matricule</th> 
+            <th>Nom</th> 
+            <th>Prenom</th>
+            <th>Classe</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of etudiants">
+            <td>{{e.id}}</td>
+            <td>{{e.matricule}}</td>
+            <td>{{e.nom}}</td>
+            <td>{{e.prenom}}</td>
+            <td>{{e.classe}}</td>
+            <td><button>Absence</button>  <input type="button" value="Delete" class="btn btn-danger mb-5" (click)="fnDeleteEtudiant()">&nbsp; </td>
+
+        </tr>
+    </tbody>
+    <input type="button" value="Add" class="btn btn-success mb-5">&nbsp;
+    <input type="button" value="Update" class="btn btn-warning mb-5">&nbsp;
+   
+
+
+
+</table>
